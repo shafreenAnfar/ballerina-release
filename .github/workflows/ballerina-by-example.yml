@@ -15,7 +15,7 @@ jobs:
       env:
         GOPATH: $HOME
     - name: Debug
-        run: |
+      run: |
           pwd
           echo ${HOME}
     - name: Checkout code
