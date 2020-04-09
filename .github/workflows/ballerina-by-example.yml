@@ -20,10 +20,8 @@ jobs:
           echo ${HOME}
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Change current directory
-      run: cd ballerinaByExample
     - name: Generate BBEs
-      run: sh build-bbe.sh v1-2 bbes v1.2.0 true
+      run: sh ballerinaByExample/build-bbe.sh v1-2 bbes v1.2.0 true
     - uses: actions/upload-artifact@v1
       with:
         name: bbe-artifact
