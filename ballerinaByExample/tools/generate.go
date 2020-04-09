@@ -182,7 +182,7 @@ type BBECategory struct {
 }
 
 func getBBECategories() []BBECategory {
-    allBBEsFile := "tools/all-bbes.json"
+    allBBEsFile := "ballerinaByExample/tools/all-bbes.json"
     rawCategories, err := ioutil.ReadFile(allBBEsFile)
     if err != nil {
         fmt.Fprintln(os.Stderr, "[ERROR] An error occured while processing : "+allBBEsFile,err)
