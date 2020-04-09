@@ -74,5 +74,5 @@ rm -rf awslambda
 
 ABSOLUTE_PATH=`pwd`
 
-go run $ABSOLUTE_PATH/tools/generate.go "target/dependencies/ballerina-examples" $SITE_VERSION $BBE_GEN_DIR $GEN_FOR_JEKYLL
+go run $ABSOLUTE_PATH/ballerinaByExample/tools/generate.go "target/dependencies/ballerina-examples" $SITE_VERSION $BBE_GEN_DIR $GEN_FOR_JEKYLL
 echo "....Completed building BBE Site...."
