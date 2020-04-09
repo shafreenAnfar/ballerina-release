@@ -21,7 +21,7 @@ import (
 var cacheDir = filepath.FromSlash("/tmp/gobyexample-cache")
 var pygmentizeBin = filepath.FromSlash("vendor/pygments/pygmentize")
 var githubBallerinaByExampleBaseURL = "https://github.com/ballerina-lang/ballerina/tree/master"
-var templateDir = "templates/"
+var templateDir = "ballerinaByExample/templates/"
 var examplesDir = os.Args[1]
 var version = os.Args[2]
 var siteDir = os.Args[3]
@@ -571,6 +571,10 @@ func isFileExist(path string) bool {
 }
 
 func main() {
+
+    dir, err := os.Getwd()
+    fmt.Println(dir)
+
     copyFile(templateDir + "site.css", siteDir+"/site.css")
     copyFile(templateDir + "ballerina-example.css", siteDir+"/ballerina-example.css")
     copyFile(templateDir + "favicon.ico", siteDir+"/favicon.ico")
